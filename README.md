@@ -5,7 +5,7 @@ Este endpoint permite emissão de notas fiscais (mod 55, 65) junto à SEFAZ (Sec
 
 
 ## Endpoint
-`POST "https://homol.ofm.com.br/api/v1/emitir/notas"`
+`"https://homol.ofm.com.br/api/v1/emitir/notas"`
 
 ## Requisição (EXEMPLO):
 
