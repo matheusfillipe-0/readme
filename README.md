@@ -7,8 +7,159 @@ Este endpoint permite emissão de notas fiscais (mod 55, 65) junto à SEFAZ (Sec
 ## Endpoint
 `POST /api/emissao`
 
-# Parâmetros de Requisição
-## Estrutura da Configuração
+## Requisição (EXEMPLO):
+
+```json
+{
+    "certificado_base64": "MIIiGwIBAzCCIecGCSqGSIb3mY=",
+    "senha_certificado": "Jc33204771",
+    "config": {
+        "tpAmb": 2,
+        "razaosocial": "JOSUE CORDEIRO DE FREITAS SILVA LTDA",
+        "cnpj": "29659954000192",
+        "siglaUF": "AL",
+        "schemes": "PL_009_V4",
+        "versao": "4.00",
+        "cUF": 27,
+        "cMun": 2704302,
+        "tpEmis": 1,
+        "modelo": "65",
+        "CSC": "7ED6267D-C0C0-4467-8DCE-ACF48B8FC211",
+        "CSCid": "000001"
+    },
+    "nfe_data": {
+        "infNFe": {
+            "versao": "4.00",
+            "Id": null,
+            "pk_nItem": null
+        },
+        "ide": {
+            "cUF": "27",
+            "cNF": "00000015",
+            "natOp": "Venda",
+            "mod": "65",
+            "serie": "1",
+            "nNF": "35",
+            "dhEmi": "2025-02-18T16:39:33-03:00",
+            "tpNF": "1",
+            "idDest": "1",
+            "cMunFG": "2704302",
+            "tpImp": "1",
+            "tpEmis": "4",
+            "cDV": "0",
+            "tpAmb": "2",
+            "finNFe": "1",
+            "indFinal": "1",
+            "indPres": "1",
+            "procEmi": "0",
+            "verProc": "1.0"
+        },
+        "emit": {
+            "CNPJ": "29659954000192",
+            "xNome": "JOSUE CORDEIRO DE FREITAS SILVA LTDA",
+            "xFant" : "JOSUE CORDEIRO DE FREITAS SILVA LTDA",
+            "enderEmit": {
+                "xLgr": " RUA CIRILO DE CASTRO",
+                "nro": "67",
+                "xBairro": "LEVADA",
+                "cMun": "2704302",
+                "xMun": "Maceió",
+                "UF": "AL",
+                "CEP": "57017050",
+                "cPais": "1058",
+                "xPais": "Brasil",
+                "fone": "8288128818"
+            },
+            "IE": "247519480",
+            "CRT": "3"
+        },
+        "dest": {
+            "CPF": "12345678909",
+            "xNome": "Cliente Exemplo",
+            "enderDest": {
+                "xLgr": "Avenida Cliente",
+                "nro": "200",
+                "xBairro": "Bairro Cliente",
+                "cMun": "3550308",
+                "xMun": "São Paulo",
+                "UF": "SP",
+                "CEP": "01002000",
+                "cPais": "1058",
+                "xPais": "Brasil",
+                "fone": "1190005000"
+            },
+            "indIEDest": "9"
+        },
+        "det": [
+            {
+                "prod": {
+                    "cProd": "001",
+                    "cEAN": "SEM GTIN",
+                    "xProd": "NOTA FISCAL EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL",
+                    "NCM": "61091000",
+                    "CFOP": "5102",
+                    "uCom": "UN",
+                    "qCom": "1.0000",
+                    "vUnCom": "100.00",
+                    "vProd": "100.00",
+                    "cEANTrib": "SEM GTIN",
+                    "uTrib": "UN",
+                    "qTrib": "1.0000",
+                    "vUnTrib": "100.00",
+                    "indTot": "1"
+                },
+                "imposto": {
+                    "ICMS": {
+                        "orig": "0",
+                        "CST": "00",
+                        "modBC": "3",
+                        "vBC": "100.00",
+                        "pICMS": "18.00",
+                        "vICMS": "18.00"
+                    },
+                    "PIS": {
+                        "CST": "07",
+                        "vBC": "100.00",
+                        "pPIS": "1.65",
+                        "vPIS": "1.65"
+                    },
+                    "COFINS": {
+                        "CST": "07",
+                        "vBC": "100.00",
+                        "pCOFINS": "7.60",
+                        "vCOFINS": "7.60"
+                    }
+                }
+            }
+        ],
+        "ICMSTot": {
+            "vBC": "100.00",
+            "vICMS": "18.00",
+            "vProd": "100.00",
+            "vNF": "100.00"
+        },
+        "transp": {
+            "modFrete": "9"
+        },
+        "pag": {
+            "vTroco": "0.00"
+        },
+        "detPag": {
+            "tPag": "01",
+            "vPag": "100.00"
+        },
+        "infAdic": {
+            "infCpl": "Venda realizada com sucesso."
+        }
+    }
+}
+
+
+```
+- ## Detalhamento de Parametrização da Requisição
+
+
+- ## Estrutura da Configuração
 
 | **Campo**                   | **Descrição**                                                                                         | **Tipo de Dado**        |
 |-------------------------|-------------------------------------------------------------------------------------------------|---------------------|
@@ -60,7 +211,7 @@ Este endpoint permite emissão de notas fiscais (mod 55, 65) junto à SEFAZ (Sec
   }
 }
 ```
-### Estrutura da Nota Fiscal :
+- ## Estrutura da Nota Fiscal :
 
 
 | Campo                           | Descrição                                                                                                                                               | Tipo de Dado |
@@ -236,7 +387,7 @@ Este endpoint permite emissão de notas fiscais (mod 55, 65) junto à SEFAZ (Sec
     }
 ```
 
-## Respostas da API
+- ## Respostas da API
 
 
 | Campo         | Tipo                | Descrição                                                                                                                                                     | Exemplo                                                                 |
@@ -251,7 +402,7 @@ Este endpoint permite emissão de notas fiscais (mod 55, 65) junto à SEFAZ (Sec
 
   
 
-#### Exemplo de Sucesso na Requisição ✅ :
+#### Exemplo de Retorno com Sucesso na Requisição ✅ :
 ```json
 {
     "sucesso": true,
@@ -263,7 +414,7 @@ Este endpoint permite emissão de notas fiscais (mod 55, 65) junto à SEFAZ (Sec
     "protocolo": "327250000001198"
 }
 ```
-#### Exemplo de falha na Requisição ⛔ :
+#### Exemplo de Retorno com falha na Requisição ⛔ :
 
 ```json
 {
