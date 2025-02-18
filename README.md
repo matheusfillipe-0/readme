@@ -273,7 +273,7 @@ Este endpoint permite emissão de notas fiscais (mod 55, 65) junto à SEFAZ (Sec
     "cStat": "704",
     "xml_enviado": "PE5GZSB4bWxucz0iaHR0cDovL3d3dy5wb3J0" ,
     "chave_nfe": "24560229659954000192650010986000101000000156",
-    "protocolo": null
+    "protocolo": "327250000001198"
 }
 
 ```
