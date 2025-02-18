@@ -5,7 +5,7 @@ Este endpoint permite emissão de notas fiscais (mod 55, 65) junto à SEFAZ (Sec
 
 
 ## Endpoint
-`POST "https://homol.ofm.com.br/api/v1/emitir/notas"`
+`"https://homol.ofm.com.br/api/v1/emitir/notas"`
 
 ## Requisição (EXEMPLO):
 
@@ -30,7 +30,7 @@ Este endpoint permite emissão de notas fiscais (mod 55, 65) junto à SEFAZ (Sec
     "nfe_data": {
         "infNFe": {
             "versao": "4.00",
-            "Id": null,
+            "Id": "35160812345678000123450010000012345678901234",
             "pk_nItem": null
         },
         "ide": {
@@ -194,22 +194,22 @@ Este endpoint permite emissão de notas fiscais (mod 55, 65) junto à SEFAZ (Sec
 
 #### Exemplo de `config`:
 ```json
-{
-  "config": {
-    "tpAmb": 2,
-    "razaosocial": "JOSUE CORDEIRO DE FREITAS SILVA LTDA",
-    "cnpj": "29659954000192",
-    "siglaUF": "AL",
-    "schemes": "PL_009_V4",
-    "versao": "4.00",
-    "cUF": 27,
-    "cMun": 2704302,
-    "tpEmis": 1,
-    "modelo": "65",
-    "CSC": "7ED6267D-C0C0-4467-8DCE-ACF48B8FC211",
-    "CSCid": "000001"
+
+ "config": {
+        "tpAmb": 2,
+        "razaosocial": "Razão-Cliente",
+        "cnpj": "69559765000192",
+        "siglaUF": "AL",
+        "schemes": "PL_009_V4",
+        "versao": "4.00",
+        "cUF": 27,
+        "cMun": 2704302,
+        "tpEmis": 1,
+        "modelo": "65",
+        "CSC": "7ED6730D-C0C0-7484-6DCE-ACF38B8FC875",
+        "CSCid": "000001"
   }
-}
+
 ```
 - ## Estrutura da Nota Fiscal :
 
@@ -272,13 +272,13 @@ Este endpoint permite emissão de notas fiscais (mod 55, 65) junto à SEFAZ (Sec
             "natOp": "Venda",
             "mod": "65",
             "serie": "1",
-            "nNF": "1",
-            "dhEmi": "2025-02-17T11:27:33-03:00",
+            "nNF": "35",
+            "dhEmi": "2025-02-18T16:39:33-03:00",
             "tpNF": "1",
             "idDest": "1",
             "cMunFG": "2704302",
-            "tpImp": "4",
-            "tpEmis": "1",
+            "tpImp": "1",
+            "tpEmis": "4",
             "cDV": "0",
             "tpAmb": "2",
             "finNFe": "1",
@@ -288,9 +288,9 @@ Este endpoint permite emissão de notas fiscais (mod 55, 65) junto à SEFAZ (Sec
             "verProc": "1.0"
         },
         "emit": {
-            "CNPJ": "29659954000192",
-            "xNome": "JOSUE CORDEIRO DE FREITAS SILVA LTDA",
-            "xFant" : "JOSUE CORDEIRO DE FREITAS SILVA LTDA",
+            "CNPJ": "98659675000098",
+            "xNome": "Cliente",
+            "xFant" : "Cliente",
             "enderEmit": {
                 "xLgr": " RUA CIRILO DE CASTRO",
                 "nro": "67",
@@ -307,7 +307,7 @@ Este endpoint permite emissão de notas fiscais (mod 55, 65) junto à SEFAZ (Sec
             "CRT": "3"
         },
         "dest": {
-            "CPF": "12345678909",
+            "CPF": "09987989909",
             "xNome": "Cliente Exemplo",
             "enderDest": {
                 "xLgr": "Avenida Cliente",
