@@ -9,9 +9,10 @@ Este endpoint permite emissão de notas fiscais (mod 55, 65) junto à SEFAZ (Sec
 
 # Parâmetros de Requisição
 ## Estrutura da Configuração
-| Campo                   | Descrição                                                                                         | Tipo de Dado        |
+
+| **Campo**                   | **Descrição**                                                                                         | **Tipo de Dado**        |
 |-------------------------|-------------------------------------------------------------------------------------------------|---------------------|
-| `certificadoDigital`     | O certificado digital, em formato Base64, é necessário para autenticação e assinatura do envio para a SEFAZ. | String (Base64)      |
+| `certificadoDigital`     | O certificado digital, em formato Base64, é necessário para autenticação e assinatura do envio para a SEFAZ. | String (Base64)     |
 | `senhaCertificacao`      | Senha de certificação necessária para autenticação na SEFAZ.                                      | String (Base64)      |
 
 - **Exemplo**:
